@@ -1,6 +1,8 @@
 # STM32-Audio-Digital-Signal-Processing-Project
 Canonical digital notch filter using the STM32-F302R8 Nucleao board written in C. 
 
+The STM32 code is in the CORE folder. A MATLAB script plotting the frequnecy response of the notch filter is in the STM32 Notch Freq Response Folder. 
+
 The digital filter consists of a few code blocks: a structure to hold the filter coefficients and states, a function to implement a direct form II IIR filter, and an ISR to periodically sample using the ADC and write using the DAC.
 
 A timer is used to trigger the ISR periodically at a rate of 32 kHz. This is the rate the input signal is sampled at and the output signal is written to the DAC. 
