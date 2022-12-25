@@ -5,4 +5,4 @@ The digital filter consists of a few code blocks: a structure to hold the filter
 
 A timer is used to trigger the ISR periodically at a rate of 32 kHz. This is the rate the input signal is sampled at and the output signal is written to the DAC. 
 
-The desired sampling frequency is obtained by adjusting the auto-reload register of the timer. The STM32-F302R8 is able to perform floating-point arithmetic. When the analog signal is read using the ADC, it is stored in a uint32_t variable. The function prototype performs floating point arithemetic to compute the filtered output signal. This value is type casted from a double to a uint32_t to be written to the DAC. 
+The desired sampling frequency is obtained by adjusting the auto-reload register of the timer. The STM32-F302R8 is able to perform floating-point arithmetic. When the analog signal is read using the ADC, it is stored in a uint32_t variable. The function prototype performs floating point arithmetic to compute the filtered output signal. This value is type casted from a double to a uint32_t to be written to the DAC. 
